@@ -8,34 +8,58 @@ However, I am still putting this on github, becuse my version is quite easy to u
 A major downside of my version is that it only takes CID:s as input.However, the more popular library, PubChemPy, allows conversion of common names to CID. If you are warking with CAS numbers in python, I recommend that you use cirpy to first transform them into SMILES and then PubChemPy to transform those to CIDs. That's in my opinion more reliable than querying with CAS as the name parameter for PubChemPy to get the CID. You can do this as follows:
 
 
+
+
+
 list_cas=whatever
 
 cid_based_on_cas=[]
 
 for cas in list_cas:
+
         smiles=cirpy.resolve(cas, "smiles")
+        
         cid=(pubchempy.get_compounds(smiles, namespace='smiles'))
+        
         print(cid[0].cid)
+        
         cid_based_on_cas.append(cid[0].cid)
+        
 
 
 or if you have a ton of common names that you want to convert to cid:
 
 
 dic_name_cid={}
+
 for name in name_list:
+
   while True:
+  
    try:
+   
     print(name)
+    
     cid=(pubchempy.get_compounds(name, namespace='name'))
+    
     try:
+    
         if len(cid)>1:
+        
             cid=cid[0]
+            
             dic_name_cid[name]=cid[0].cid
+            
         elif len(cid)==1:
+        
             dic_name_cid[name]=cid[0].cid
+            
     except (AttributeError, TypeError) as e:
+    
         dic_name_cid[name]=cid.cid
+        
     break
+    
    except:
+   
        pass
