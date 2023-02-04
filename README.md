@@ -9,8 +9,7 @@ A major downside of my version is that it only takes CID:s as input.However, the
 
 
 
-
-'''
+```
 list_cas=whatever
 
 cid_based_on_cas=[]
@@ -24,12 +23,13 @@ for cas in list_cas:
         print(cid[0].cid)
         
         cid_based_on_cas.append(cid[0].cid)
- '''       
+```     
 
 
 or if you have a ton of common names that you want to convert to cid:
 
-'''
+
+```
 dic_name_cid={}
 
 for name in name_list:
@@ -63,4 +63,4 @@ for name in name_list:
    except:
    
        pass
-'''
+```
