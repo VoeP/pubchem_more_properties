@@ -1,7 +1,7 @@
 # pubchem_more_properties
 
 
-I wanted to make this code available to save some other poor soul from some additional google searches. However, after checking if someone else on github had made something similar, I realized that this idea has already been done many times by people smarter than me, which is unsurprising considering how limited the list of properties you can query with PubChemPy are. If you want a more comprehensive version, go check out this repository: https://github.com/mawansui/pubchemprops. 
+I wanted to make this code available to save some other poor soul from a bunch of google searches. However, after checking if someone else on github had made something similar, I realized that this idea has already been done many times by people smarter than me, which is unsurprising considering how limited the list of properties you can query with PubChemPy are. If you want a more comprehensive version, go check out this repository: https://github.com/mawansui/pubchemprops. 
 
 However, I am still putting this on github, becuse my version is quite easy to understand for beginners and easy for a user to add their own string formatting to if they wish to edit the information retireved from PubChem. What makes it more easy to understand? The reason I say that is because in my version I check which entry is contained in the headings of the xml version of the PubChem webpage. Making this a series of if statements should allow a user to go and add the formatting they want for entries they are dissatisfied with. My version also outputs everything as a pandas table.
 
