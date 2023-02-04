@@ -9,7 +9,9 @@ A major downside of my version is that it only takes CID:s as input.However, the
 
 
 list_cas=whatever
+
 cid_based_on_cas=[]
+
 for cas in list_cas:
         smiles=cirpy.resolve(cas, "smiles")
         cid=(pubchempy.get_compounds(smiles, namespace='smiles'))
