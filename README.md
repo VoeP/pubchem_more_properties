@@ -64,3 +64,13 @@ for name in name_list:
    
        pass
 ```
+
+#How does it work?
+
+As it turns out, you can download a xml or JSON representation fo a sites contents from PubChem by clicking a link that they always provide with the entry for a record. The link is not random, and is always formatted as query_string= "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{0}/JSON/?response_type=save&response_basename=compound_CID_XXXX, where XXXX is the actual CID. The code on this repository works by downloading the JSON representation of the webpage and changing it to a dictionary, then checking the keys of the resulting dictionary for the relevant data. You can read the function itself and it should be fairly obvious how it works.
+
+
+
+#Requirements
+
+You need pandas.
