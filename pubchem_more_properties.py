@@ -1,10 +1,9 @@
 
-
 import urllib.request
 import pandas as pd
 import json
-import numpy as np
-import re
+
+
 
 
 
@@ -322,7 +321,7 @@ def cid_list_search(list_CID):
                                    "Vapor Pressure",	"Solubility",
                                    "Stability", "Topological Polar Surface Area"])
     table_full=pubsearch(list_CID[0])
-    for i in np.arange(1, len(list_CID)):
+    for i in range(len(list_CID)):
       print(list_CID[i])
       try:
         
@@ -334,4 +333,3 @@ def cid_list_search(list_CID):
       
         
     return(table_full)
-        
