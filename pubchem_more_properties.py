@@ -60,17 +60,7 @@ def pubsearch(CID: int) -> pd.DataFrame:
     if experimental_props != "foo":
         if isinstance(experimental_props, dict):
             experimental_props=experimental_props["Section"]
-    #try:
-    #    computed_props=data1["Record"]["Section"][3]["Section"][0]["Section"]
-    #except:
-    #    print("aa")
-    #    computed_props=data1["Record"]["Section"][2]["Section"]["Section"]
-    #    if isinstance(computed_props, list):
-    #        computed_props=computed_props[0]
-    #        if "Section" in computed_props.keys():
-    #            computed_props=computed_props["Section"]
-    #            print(computed_props)
-    #print(computed_props)
+
     for i in computed_props:
         TOCHeading = i["TOCHeading"]
         entry=i["Information"][0]["Value"]
