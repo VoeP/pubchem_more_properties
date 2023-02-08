@@ -8,6 +8,10 @@ import json
 
 
 def pubsearch(CID: int) -> pd.DataFrame:
+    """
+    Takes a CID as an integer and uses urllib to retrieve a json representation of the webpage, then transforms it into a dictionary, goes through 
+    the experimental and computed properties for the pubchem entry and builds a table based on that
+    """
     result_table=pd.DataFrame(columns=["CID", "Exact Mass",	"Density",  "Decomposition", "Chemical Classes", "XLogP", "Molecular Weight",	
                                 "Log Kow", "Boiling Point",
                                    "Vapor Pressure",	"Solubility",
